@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         uses: borales/actions-yarn@v4
         with:
-          cmd: --cwd unocash.fable install
+          cmd: --cwd UnoCash.Fable install
       - name: 'Qodana scan'
         uses: JetBrains/qodana-action@v2022.3.2
         with:
