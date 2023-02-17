@@ -15,14 +15,14 @@ jobs:
         with:
           node-version: 16
 
-      - name: Install dependencies
-        uses: borales/actions-yarn@v4
-        with:
-          cmd: install
-           
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+	
+      - name: Install dependencies
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: --cwd unocash.fable install
 
       - name: 'Qodana scan'
         uses: JetBrains/qodana-action@v2022.3.2
